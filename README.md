@@ -19,5 +19,5 @@
 
 
 ## 📸 Screenshots
-<img src="https://github.com/jaydeep-shelake/typeBeater.js/blob/master/jaydeep-shelake.github.io_typeBeater.js_.png" width='500px' height="auto">
+<img src="https://github.com/jaydeep-shelake/regEx.js/blob/master/jaydeep-shelake.github.io_regEx.js_.png" width='500px' height="auto">
 link:https://jaydeep-shelake.github.io/regEx.js/
