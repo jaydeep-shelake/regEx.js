@@ -20,9 +20,10 @@
                 <span>or use your email for registration</span>
                 
                 <input type="text" placeholder="Name" class="name"/>
+                <span class="wrong-name" style="color:red;"></span>
                 <input type="text" placeholder="Email" class="email" />
                 <span class="wrong-email" style="color:red;"></span>
-                <input type="password" placeholder="Password" class="password" />
+                <input type="password" placeholder="Password" class="password" value=""/>
                 <span class="wrong-password" style="color:red;"></span>
                 <button id="singnUpBtn">Sign Up</button>
             </form>
@@ -56,6 +57,9 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="msg">
+        <p id="success"></p>
     </div>
     
     <script src="index.js"></script>

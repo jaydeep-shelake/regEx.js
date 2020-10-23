@@ -14,10 +14,32 @@ signInBtn.addEventListener('click',()=>{
 
 //regex
 
+
 const email = document.querySelectorAll('.email');
 const password = document.querySelectorAll('.password');
 const signInButton = document.getElementById('signInBtn');
 const signUpButton = document.getElementById('singnUpBtn');
+const msg = document.querySelector('.msg');
+const success = document.getElementById('success');
+const enterName = document.querySelector('.name');
+signUpButton.addEventListener('click',()=>{
+  if(!password.value && !email.value && !enterName.value){
+    wrongPassword.innerHTML='Please enter Password'
+    wrongEmail.innerHTML='Please enter Email'
+    wrongName.innerHTML='Please enter name'
+  }
+  else{
+    wrongName.innerHTML='';
+    console.log('suceesfully singned up');
+    msg.classList.add('show');
+    success.innerHTML=`<strong>Successfully</strong> singned up`
+    setTimeout(()=>{
+       msg.classList.remove('show');
+    },1500)
+  }
+   
+})
+
 
 const emailRegEx = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 const passwordRegEx =/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{6,})/;
@@ -28,6 +50,7 @@ const passwordRegEx =/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{
 //(?=.{6,}) string must be 8 chracter or longer
 const wrongEmail = document.querySelector('.wrong-email');
 const wrongPassword = document.querySelector('.wrong-password');
+const wrongName = document.querySelector('.wrong-name')
 email.forEach((email)=>{
     email.addEventListener('input',()=>{
         const inputValue=email.value;
@@ -65,9 +88,15 @@ password.forEach((password)=>{
           password.classList.add('outline-red');
           password.classList.remove('outline');
           
+          
             signUpButton.addEventListener('click',()=>{
                 wrongPassword.innerHTML=`Password should have uppercase letter lowercase and special chactecter`
-            });
+               console.log(password.value);
+          });
+          
+          
+            
+            
           
           
       }

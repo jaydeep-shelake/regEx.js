@@ -198,3 +198,18 @@ button.ghost{
 .outline-red{
     outline: 1px solid red;
 }
+.msg{
+    width: 500px;
+    height: 80px;
+    background:linear-gradient(90deg, rgba(131, 240, 42, 0.734) 0%, rgba(182, 238, 136, 0.707) 100%);
+    color: green;
+    border-radius: 4px;
+    position: fixed;
+    top: -80px;
+    margin: auto;
+    transition: 0.4s;
+}
+.show{
+    top:0;
+    transition: 0.6s;
+}
